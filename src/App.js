@@ -7,6 +7,7 @@
 //   React.createElement(Expenses, {items:expenses})
 // )
 import Expenses from './components/Expenses/Expenses'
+import NewExpense from './components/NewExpense/NewExpense'
 
 // lowercase elements are built in html elements
 // elements starting with uppercase char are elements defined by developer(components)
@@ -35,7 +36,7 @@ function App() {
   ]
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   )
