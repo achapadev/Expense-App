@@ -19,9 +19,10 @@ function ExpenseItem(props) {
   console.log('ExpenseItem evaluted by React')
   // can create your function either on the click itself via arrow function or separately to keep jsx clean
   // instead it will detect it was initialized in the past and grab latest state (from state update)
-  const clickHandler = () => {
-    setTitle('Updated!')
-  }
+
+  // const clickHandler = () => {
+  //   setTitle('Updated!')
+  // }
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -29,7 +30,6 @@ function ExpenseItem(props) {
         <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
     </Card>
   )
 }
