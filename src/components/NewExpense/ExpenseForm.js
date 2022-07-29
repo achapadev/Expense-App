@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   // value of input element will always be a string by default
   //   you can either have individual state for each input or one input object..your choice
   const [enteredTitle, setEnteredTitle] = useState('')
@@ -48,7 +48,7 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     }
-    console.log(expenseData)
+    props.onSaveExpenseData(expenseData)
     setEnteredTitle('')
     setEnteredAmount('')
     setEnteredDate('')
