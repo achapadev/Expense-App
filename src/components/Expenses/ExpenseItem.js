@@ -16,7 +16,6 @@ function ExpenseItem(props) {
   // call updating function when state should change
   // React will re-execute comp function and re-evalute JSX code whenever the state changes
   // React will not re-initialize the state on subsequent renders only on first run
-  console.log('ExpenseItem evaluted by React')
   // can create your function either on the click itself via arrow function or separately to keep jsx clean
   // instead it will detect it was initialized in the past and grab latest state (from state update)
 
@@ -27,7 +26,7 @@ function ExpenseItem(props) {
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
     </Card>
